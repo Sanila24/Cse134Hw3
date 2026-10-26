@@ -1,9 +1,10 @@
+
+/* These properties inherit throughout the page. */
 body {
   font-family: Georgia, "Times New Roman", serif;
   color: #302719;
   line-height: 1.7;
   background-color: #fffaf0;
-  max-width:  fifty;
   max-width: 50rem;
   margin: 0 auto;
   padding: 2rem 1.25rem;
@@ -57,6 +58,7 @@ blockquote p {
 }
 
 fieldset {
+  min-width: 0;
   border: 0.1rem solid #b88b35;
   border-radius: 0.5rem;
   padding: 1rem;
@@ -99,12 +101,15 @@ button:hover {
   background-color: #523600;
 }
 
-
+/* First rule in the cascade example. */
 a {
   color: #785000;
 }
 
-
+/*
+  Both rules have the same selector, specificity, and importance.
+  This later rule wins because it appears later in the stylesheet.
+*/
 a {
   color: #075b70;
 }
@@ -113,7 +118,6 @@ a:hover {
   color: #873600;
   text-decoration-thickness: 0.15rem;
 }
-
 
 a:focus,
 input:focus,
